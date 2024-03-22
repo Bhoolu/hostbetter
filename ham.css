@@ -1,0 +1,194 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #262626;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.nav-branding {
+  font-size: 2rem;
+}
+
+.nav-link {
+  transition: 0.7s ease;
+}
+
+nav-link:hover {
+  color: blue;
+}
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+
+.line-B {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 25px;
+  padding: 15px;
+  gap: 20px;
+  border-bottom-style: black 1px, solid;
+  border-bottom: black 1px solid;
+}
+.line-C {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 25px;
+  font-family: "Montserrat", sans-serif;
+  padding: 15px;
+  gap: 20px;
+  width: 100%;
+  border-bottom: black 1px solid;
+}
+.line-D {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 25px;
+  font-family: "Montserrat", sans-serif;
+  padding: 15px;
+  gap: 20px;
+  border-bottom: black 1px solid;
+}
+.airbnb {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
+  font-size: 25px;
+}
+.note1 {
+  display: flex;
+  text-align: center;
+  /* padding: 10px; */
+  padding-left: 20px;
+  padding-right: 20px;
+  gap: 10px;
+  font-size: 20px;
+  letter-spacing: 20%;
+  font-family: "Montserrat", sans-serif;
+}
+.note2 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px;
+  gap: 10px;
+  font-size: 25px;
+}
+.button {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 20px;
+  padding: 20px;
+  gap: 10px;
+  width: 100%;
+}
+
+.picture {
+  display: block;
+  /* flex-direction: column; */
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+  background: url("./image/hooosteddd.png");
+}
+.tbilisi {
+  display: block;
+  gap: 25 px;
+  padding: 25px;
+  font-size: 25px;
+  color: #000000;
+  font-weight: 700;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: black;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-item {
+    margin: 16px 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+}
